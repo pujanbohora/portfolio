@@ -120,7 +120,7 @@ class _ContactFormState extends State<ContactForm> {
                 if (!_formKey.currentState!.validate()) {
                   return;
                 }
-                sendEmail();
+                sendEmail(context);
               },
               backgroundColor: AppColors.primaryColor,
               width: _getFormWidth(context.width),
@@ -131,92 +131,37 @@ class _ContactFormState extends State<ContactForm> {
     );
   }
 
-Future<void> sendEmail() async {
-  var subject = '${_nameController.text} - ${_subjectController.text}';
-  final Email email = Email(
-    body: _emailController.text,
-    subject: subject,
-    recipients: ["bohorapawan@gmail.com"],
-    cc: [_emailController.text],
-    bcc: [_emailController.text],
-    // attachmentPaths: ['/path/to/attachment.zip'], // For future use
-    isHTML: false,
-  );
+  Future<void> sendEmail(BuildContext context) async {
+    var subject = '${_nameController.text} - ${_subjectController.text}';
+    final Email email = Email(
+      body: _emailController.text,
+      subject: subject,
+      recipients: ["bohorapawan@gmail.com"],
+      cc: [_emailController.text],
+      bcc: [_emailController.text],
+      isHTML: false,
+    );
 
-  String platformResponse;
+    String platformResponse;
 
-  try {
-    await FlutterEmailSender.send(email);
-    platformResponse = 'E-mail sent successfully';
-  } catch (error) {
-    print("ERROR:::${error}");
-    platformResponse = error.toString();
+    try {
+      await FlutterEmailSender.send(email);
+      platformResponse = 'E-mail sent successfully';
+    } catch (error) {
+      print("ERROR:::${error}");
+      platformResponse = 'Failed to send email: ${error.toString()}';
+    }
+
+    if (!mounted) return;
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(platformResponse),
+        backgroundColor: platformResponse.contains('successfully') ? Colors.green : Colors.red,
+        duration: Duration(seconds: 3),
+      ),
+    );
   }
-
-  if (!mounted) return;
-
-  // Fluttertoast.showToast(
-  //     msg: platformResponse,
-  //     toastLength: Toast.LENGTH_SHORT,
-  //     gravity: ToastGravity.TOP_RIGHT,
-  //     timeInSecForIosWeb: 1,
-  //     backgroundColor: platformResponse.contains('sent') ? Colors.green : Colors.red,
-  //     textColor: Colors.white,
-  //     fontSize: 16.0);
-}
-
-
-  // Future<void> sendEmail() async {
-  //   var subject = '${_nameController.text} - ${_subjectController.text}';
-  //   final Email email = Email(
-  //     body: _emailController.text,
-  //     subject: subject,
-  //     recipients: ["bohorapawan@gmail.com"],
-  //     cc: [_emailController.text],
-  //     bcc: [_emailController.text],
-  //     // attachmentPaths: ['/path/to/attachment.zip'],
-  //     isHTML: false,
-  //   );
-  //   ;
-
-  //   String platformResponse;
-  //   bool emailSent = false;
-
-  //   try {
-  //     await FlutterEmailSender.send(email);
-  //     platformResponse = 'E-mail sent successfully';
-  //     setState(() {
-  //       emailSent = true;
-  //     });
-  //   } catch (error) {
-  //     print("ERROR:::${error}");
-  //     setState(() {
-  //       emailSent = true;
-  //     });
-  //     platformResponse = error.toString();
-  //   }
-
-  //   if (!mounted) return;
-
-  //   Fluttertoast.showToast(
-  //       msg: platformResponse.toString(),
-  //       toastLength: Toast.LENGTH_SHORT,
-  //       gravity: ToastGravity.TOP_RIGHT,
-  //       timeInSecForIosWeb: 1,
-  //       backgroundColor: emailSent ? Colors.green : Colors.red,
-  //       textColor: Colors.white,
-  //       fontSize: 16.0);
-
-  //   // ScaffoldMessenger.of(context).showSnackBar(
-  //   //   SnackBar(
-  //   //     behavior: SnackBarBehavior.floating,
-  //   //
-  //   //     content: Text(platformResponse),
-  //   //   ),
-  //   // );
-  // }
-
-
 
   double _getFormWidth(double deviceWidth) {
     if (deviceWidth < DeviceType.mobile.getMaxWidth()) {
