@@ -26,7 +26,7 @@
 #
 #  uses-material-design: true
 
-name: testing_app
+name: pujan_portfolio
 description: "A new Flutter project."
 
 version: 1.0.0+1
@@ -48,6 +48,12 @@ dependencies:
   pdf: ^3.10.1
   shimmer: ^2.0.0
   universal_html: ^2.0.9
+  animated_text_kit: ^4.2.3
+  flutter_animate: ^4.5.2
+  lottie: ^3.3.1
+  responsive_framework: ^1.5.1
+  google_fonts: ^6.2.1
+  url_launcher: ^6.3.1
 #  cached_network_image: ^3.2.3
 #  fluttertoast:
 
@@ -73,6 +79,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/profile_pic.jpg
 
   fonts:
     - family: Poppins
