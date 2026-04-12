@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pujan Bohora — Software Engineer</title>
+  <meta name="description" content="Software Engineer with 3.5+ years building scalable, high-performance applications across mobile, web, and backend systems." />
+  <meta property="og:title" content="Pujan Bohora — Software Engineer" />
+  <meta property="og:description" content="Full-stack developer specializing in mobile, web, and distributed systems." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <a href="#main" class="sr-only" style="position:absolute;top:0;left:0;padding:8px;background:var(--color-primary);color:var(--color-text-inverse);z-index:999;font-size:14px;">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Pujan Bohora">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="6" fill="currentColor" opacity="0.1"/>
+          <path d="M8 24V8h6.5c3.6 0 5.5 2.1 5.5 5.2 0 3.1-2 5.3-5.5 5.3H12.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="23" cy="21" r="2.5" fill="var(--color-primary)"/>
+        </svg>
+        <span>Pujan Bohora</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button data-theme-toggle aria-label="Switch to dark mode" class="theme-toggle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" id="menuBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-label">Software Engineer</p>
+          <h1 class="hero-title">Building scalable systems<br/>from mobile to cloud</h1>
+          <p class="hero-description">3.5+ years architecting high-performance applications across Flutter, React, Python, and distributed backends. Currently pursuing MS in Computer Science at Wright State University with a 4.0 GPA.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number" data-target="45">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Organizations Served</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="3.5">0</span><span class="stat-suffix">+ yrs</span>
+              <span class="stat-label">Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="4.0">0</span>
+              <span class="stat-label">GPA (MS CS)</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-code-block">
+            <div class="code-header">
+              <span class="code-dot" style="background:#f87171"></span>
+              <span class="code-dot" style="background:#fbbf24"></span>
+              <span class="code-dot" style="background:#34d399"></span>
+              <span class="code-filename">engineer.dart</span>
+            </div>
+            <pre><code><span class="code-keyword">class</span> <span class="code-type">SoftwareEngineer</span> {
+  <span class="code-keyword">final</span> name = <span class="code-string">'Pujan Bohora'</span>;
+  <span class="code-keyword">final</span> role = <span class="code-string">'Full-Stack Dev'</span>;
+
+  <span class="code-type">List</span>&lt;<span class="code-type">String</span>&gt; get skills =&gt; [
+    <span class="code-string">'Flutter'</span>, <span class="code-string">'React'</span>,
+    <span class="code-string">'Python'</span>, <span class="code-string">'Node.js'</span>,
+    <span class="code-string">'AWS'</span>, <span class="code-string">'CUDA C++'</span>,
+  ];
+
+  <span class="code-type">Future</span>&lt;<span class="code-type">Impact</span>&gt; build() <span class="code-keyword">async</span> {
+    <span class="code-keyword">return</span> Impact(
+      latency: <span class="code-string">'-60%'</span>,
+      uptime: <span class="code-string">'99.9%'</span>,
+    );
+  }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">01</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I'm a Software Engineer with a passion for building products that scale. With over 3.5 years of experience, I've architected solutions serving 45+ organizations and thousands of users — from educational platforms to ride-sharing systems to e-commerce marketplaces.</p>
+            <p>My expertise spans the full stack: mobile development with Flutter/Dart, frontend with React/Next.js, backend with Python/FastAPI and Node.js, and systems-level programming with CUDA C++. I care deeply about clean architecture, performance optimization, and developer experience.</p>
+            <p>Currently pursuing my Master's in Computer Science at Wright State University, where I'm studying advanced quantum computing, parallel programming on many-core GPUs, and distributed systems.</p>
+          </div>
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <span class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </span>
+              <h3>Performance First</h3>
+              <p>Reduced system latency by 35-60% and load times by 35% through code optimization and lazy loading patterns.</p>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </span>
+              <h3>Scalable Architecture</h3>
+              <p>Built multi-tenant systems serving 45+ institutions with monorepo architecture and type-safe patterns.</p>
+            </div>
+            <div class="highlight-card">
+              <span class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </span>
+              <h3>End-to-End Delivery</h3>
+              <p>From CI/CD pipelines to production debugging, I own the full lifecycle — shipping reliably with 99.9% uptime.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">02</span>
+          <h2 class="section-title">Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-range">Aug 2025 — Dec 2025</span>
+              <span class="location">USA (Remote)</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Software Engineer</h3>
+              <span class="company">Halen Technology</span>
+              <ul>
+                <li>Architected scalable ride-sharing platform with dual mobile applications using monorepo architecture (Melos), implementing MVVM and type-safe state management — reducing rebuild cycles by 60%</li>
+                <li>Engineered real-time matching system using distributed geo-queries, integrated Google Maps, Stripe Connect with split payment processing for multi-party transactions</li>
+                <li>Designed CI/CD pipeline with automated build systems and multi-platform deployment, cutting release cycle from 2 days to 2 hours</li>
+                <li>Resolved critical production issues including auth race conditions and memory leaks, reducing battery drain by 45% while maintaining 99.9% uptime</li>
+              </ul>
+              <div class="tech-tags">
+                <span>Flutter</span><span>Dart</span><span>Melos</span><span>Google Maps</span><span>Stripe</span><span>CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-range">Jul 2022 — Jul 2024</span>
+              <span class="location">Kathmandu, Nepal</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Software Engineer</h3>
+              <span class="company">Digi Technology Pvt. Ltd</span>
+              <ul>
+                <li>Architected SchoolWorksPro educational platform serving 45+ institutions using multi-tenant architecture with flavor-based white-labeling</li>
+                <li>Designed Anti-Plagiarism detection system with content verification algorithms and real-time text analysis APIs</li>
+                <li>Built full-stack e-commerce platform (Gyapu) with product catalog, order processing pipeline, and multi-vendor marketplace</li>
+                <li>Implemented native payment gateway integration using Swift/Kotlin with cross-platform communication bridges</li>
+                <li>Deployed OTA update system (Shorebird) reducing deployment time by 90%</li>
+                <li>Optimized performance through lazy loading and memory management, reducing load times by 35%</li>
+              </ul>
+              <div class="tech-tags">
+                <span>Flutter</span><span>Swift</span><span>Kotlin</span><span>Multi-tenant</span><span>Shorebird</span><span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-range">Apr 2022 — Jul 2022</span>
+              <span class="location">Kathmandu, Nepal</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Software Engineer</h3>
+              <span class="company">Varosa Technology</span>
+              <ul>
+                <li>Developed mobile applications following clean architecture principles and industry-standard design patterns</li>
+                <li>Implemented real-time data sync, cloud storage integration, and push notification systems</li>
+                <li>Participated in agile workflows including sprint planning, code reviews, and CI practices</li>
+              </ul>
+              <div class="tech-tags">
+                <span>Mobile Dev</span><span>Clean Architecture</span><span>Firebase</span><span>Agile</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-range">Sep 2021 — Apr 2022</span>
+              <span class="location">Kathmandu, Nepal</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Software Engineer Intern</h3>
+              <span class="company">Kurma Tech</span>
+              <ul>
+                <li>Gained hands-on experience in mobile app development, contributing to feature implementation and bug fixes</li>
+                <li>Learned professional workflows including version control, documentation standards, and testing</li>
+                <li>Collaborated on UI development and API integration under senior engineer mentorship</li>
+              </ul>
+              <div class="tech-tags">
+                <span>Mobile Dev</span><span>Git</span><span>API Integration</span><span>Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">03</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+        <div class="education-card">
+          <div class="edu-main">
+            <h3>Master's in Computer Science</h3>
+            <span class="company">Wright State University — Fairborn, OH</span>
+            <span class="date-range">Apr 2026 — Present</span>
+          </div>
+          <div class="edu-details">
+            <div class="edu-gpa">
+              <span class="gpa-value">4.0</span>
+              <span class="gpa-label">/ 4.0 GPA</span>
+            </div>
+            <div class="edu-courses">
+              <h4>Relevant Coursework</h4>
+              <div class="tech-tags">
+                <span>Algorithm Design & Analysis</span>
+                <span>Advanced Quantum Computing</span>
+                <span>Parallel Programming (Many-Core GPUs)</span>
+                <span>Distributed Computing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">04</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card project-featured">
+            <div class="project-top">
+              <span class="project-type">AI / Machine Learning</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </div>
+            <h3>Sentiment Analysis System</h3>
+            <p>Built an automated training and evaluation pipeline with early stopping. Implemented real-time data synchronization using Firebase and deployed the model as a REST API for application integration.</p>
+            <div class="tech-tags">
+              <span>Python</span><span>PyTorch</span><span>Hugging Face</span><span>Firebase</span><span>REST API</span>
+            </div>
+            <span class="project-date">Aug 2025 — Present</span>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-type">Full-Stack Web</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </div>
+            <h3>JobManagerPro</h3>
+            <p>Full-stack job tracking platform with a companion browser extension for managing job applications. Features real-time sync between extension and web dashboard, Redis caching, and SSL configuration.</p>
+            <div class="tech-tags">
+              <span>Next.js</span><span>Firebase</span><span>Redis</span><span>Browser Extension</span>
+            </div>
+            <span class="project-date">Jul 2025 — Present</span>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">
+              <span class="project-type">Web Application</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </div>
+            <h3>Find-Nepalis</h3>
+            <p>Scalable web application with a microservices backend handling real-time geolocation data. Features interactive 3D data visualizations using Three.js and WebGL for global user mapping, with Redis caching reducing API response times by 45%.</p>
+            <div class="tech-tags">
+              <span>Next.js</span><span>Node.js</span><span>Three.js</span><span>WebGL</span><span>MongoDB</span><span>Redis</span>
+            </div>
+            <span class="project-date">Apr 2025</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">05</span>
+          <h2 class="section-title">Technical Skills</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <div class="skill-items">
+              <span>Dart</span><span>Python</span><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>Swift</span><span>Kotlin</span><span>SQL</span><span>CUDA C++</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Frameworks</h3>
+            <div class="skill-items">
+              <span>React</span><span>Next.js</span><span>Node.js</span><span>Express.js</span><span>FastAPI</span><span>React Native</span><span>Flutter</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Database & Cloud</h3>
+            <div class="skill-items">
+              <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Redis</span><span>AWS</span><span>Firebase</span><span>SQL Server</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Tools & DevOps</h3>
+            <div class="skill-items">
+              <span>Git</span><span>Docker</span><span>GitHub Actions</span><span>Codemagic</span><span>Fastlane</span><span>Vercel</span><span>Melos</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Architecture</h3>
+            <div class="skill-items">
+              <span>Clean Architecture</span><span>MVVM</span><span>MVC</span><span>Repository Pattern</span><span>Dependency Injection</span><span>Design Patterns</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="contact-inner">
+          <div class="section-header">
+            <span class="section-label">06</span>
+            <h2 class="section-title">Let's Connect</h2>
+          </div>
+          <p class="contact-text">I'm always open to discussing new opportunities, collaborations, or interesting technical challenges. Feel free to reach out.</p>
+          <div class="contact-links">
+            <a href="mailto:bohorapujan79@gmail.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email Me
+            </a>
+            <a href="https://linkedin.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Pujan Bohora. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./app.js" defer></script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
